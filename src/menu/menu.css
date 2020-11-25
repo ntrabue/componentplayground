@@ -1,0 +1,53 @@
+.menu {
+  display: inline-block;
+  position: relative;
+}
+
+.menu-list {
+  display: none;
+  z-index: 300;
+  position: absolute;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  overflow: visible;
+  cursor: pointer;
+  font-weight: 300;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  width: 100%;
+  min-width: 150px;
+  max-width: 600px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.menu-list[data-visible] {
+  display: block;
+}
+
+.menu-item {
+  font-size: 1rem;
+  padding: 8px 16px;
+  background-color: white;
+  transition: background-color 0.2s;
+}
+
+.menu-item:first-child {
+  padding-top: 8px;
+}
+
+.menu-item:last-child {
+  padding-bottom: 8px;
+}
+
+.menu-item:focus {
+  background-color: lightgrey;
+}
+
+.menu-item[aria-disabled] {
+  color: grey;
+  cursor: not-allowed;
+}
+
+.menu-item[aria-disabled]:hover {
+  background-color: white;
+}
